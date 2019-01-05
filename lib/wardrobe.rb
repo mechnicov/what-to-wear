@@ -1,7 +1,7 @@
 class Wardrobe
   def initialize
     @wardrobe =
-      Dir.glob("#{__dir__}/../data/*.wear").
+      Dir["#{__dir__}/../data/*.wear"].
         map { |path| File.readlines(path, chomp: true) }.
         map { |line| Clothing.new(line[0],
                                   line[1],
