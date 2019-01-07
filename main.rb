@@ -2,7 +2,7 @@ require_relative 'lib/clothing'
 require_relative 'lib/wardrobe'
 require_relative 'lib/weather_checker'
 
-checker = WeatherChecker.new
+checker = WeatherChecker.new('https://www.yandex.ru')
 temperature = checker.temperature.to_i
 city = checker.city
 
