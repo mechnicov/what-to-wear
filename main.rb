@@ -6,7 +6,7 @@ checker = WeatherChecker.new
 temperature = checker.temperature.to_i
 city = checker.city
 
-wardrobe = Wardrobe.new
+wardrobe = Wardrobe.new("#{__dir__}/data")
 clothes_for_today = wardrobe.clothes_for_today(temperature)
 
 STDOUT.puts "#{city}. За окном #{temperature}°C"
