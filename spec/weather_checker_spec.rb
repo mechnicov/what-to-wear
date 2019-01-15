@@ -1,11 +1,10 @@
 require 'weather_checker'
 
-describe WeatherChecker do
-  describe '.new' do
-    let (:checker) { WeatherChecker.new("#{__dir__}/fixtures/test.html") }
+RSpec.describe WeatherChecker do
+  describe '.get_weather_data' do
+    let (:checker) { WeatherChecker.get_weather_data("#{__dir__}/fixtures/test.html") }
     it 'should return city and temperature' do
-      expect(checker.city).to eq 'Москва'
-      expect(checker.temperature).to eq -11
+      expect(checker).to eq(:city => 'Stockholm, Sweden', :temperature => -2)
     end
   end
 end
